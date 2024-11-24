@@ -14,15 +14,6 @@ if (typeof window !== 'undefined') {
   window.proj4 = proj4;
 }
 
-interface Century {
-  type: 'test' | 'odi' | 't20i';
-  runs: number;
-  against: string;
-  latitude: number;
-  longitude: number;
-  venue: string;
-}
-
 const CricketCenturiesMap: React.FC = () => {
   const chartRef = useRef<HighchartsReact.RefObject>(null);
   const [mapData, setMapData] = React.useState<any>(null);
@@ -73,20 +64,47 @@ const CricketCenturiesMap: React.FC = () => {
   const chartOptions: Highcharts.Options = {
     chart: {
       map: mapData,
-      height: '600px'
+      height: '600px',
+      backgroundColor: '#1a1a1a',  // Dark background
+      borderColor: '#333333',
+      plotBorderColor: '#333333',
+      style : {
+        fontFamily : 'Inter,sans-serif'
+      }
     },
     title: {
       text: 'Cricket Centuries by Venue',
-      align: 'left'
+      align: 'left',
+      style : {
+        color : '#ffffff' 
+      }
     },
     subtitle: {
       text: 'Test (Red), ODI (Blue), T20I (Green)',
-      align: 'left'
+      align: 'left',
+      style : {
+        color : '#cccccc' 
+      }
     },
     mapNavigation: {
       enabled: true,
       buttonOptions: {
-        verticalAlign: 'bottom'
+        verticalAlign: 'bottom',
+        theme : {
+          fill: '#2d2d2d',
+          stroke: '#4d4d4d',
+          style: {
+            color: '#ffffff'
+          },
+          states: {
+            hover: {
+              fill: '#3d3d3d'
+            },
+            select: {
+              fill: '#4d4d4d'
+            }
+          }
+        }
       }
     },
     tooltip: {
@@ -95,6 +113,10 @@ const CricketCenturiesMap: React.FC = () => {
         return `<b>${point.name}</b><br/>
                 ${point.venue}<br/>
                 Format: ${point.type}`;
+      },
+      backgroundColor : 'rgba(40, 40, 40, 0.9)',
+      style: {
+        color: '#ffffff'  // White text for tooltip
       }
     },
     series: [{
