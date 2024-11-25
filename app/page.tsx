@@ -15,7 +15,7 @@ export default function Home() {
             <div>
               <div>
                 <div className="container mx-auto px-4">
-                  <div className="flex max-sm:flex-col justify-center space-x-4">
+                  <div className="flex max-sm:flex-col justify-center space-x-4 max:sm:space-x-0 my-2">
                     <a
                       href="https://github.com/akshatg5"
                       className="text-gray-600 hover:text-gray-800"
