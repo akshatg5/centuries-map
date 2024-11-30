@@ -136,7 +136,7 @@ export function WorldMap({
           })}
         </svg>
       </div>
-      <Card className="px-5 py-4 mt-4">
+      <Card className="px-5 py-4 mt-4 fixed bottom-10">
         <CardTitle>Legend:</CardTitle>
         <CardContent className="flex flex-col">
           <div className="flex items-center">
