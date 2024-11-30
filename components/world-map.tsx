@@ -159,6 +159,9 @@ export function WorldMap({
               color="#FFA726"
               className="bg-[#FFA726] rounded-full ml-4 my-1"
             />
+            <div>
+                <p>Hover over the circles to check more details!</p>
+            </div>
           </div>
         </CardContent>
       </Card>
