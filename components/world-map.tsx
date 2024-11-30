@@ -138,6 +138,7 @@ export function WorldMap({
       </div>
       <Card className="px-5 py-4 mt-4 fixed bottom-10">
         <CardTitle>Legend:</CardTitle>
+        <p className="text-xs">Hover over the circles to check more details!</p>
         <CardContent className="flex flex-col">
           <div className="flex items-center">
             Test{" "}
@@ -159,10 +160,9 @@ export function WorldMap({
               color="#FFA726"
               className="bg-[#FFA726] rounded-full ml-4 my-1"
             />
-            <div>
-                <p>Hover over the circles to check more details!</p>
-            </div>
           </div>
+            <div className="">
+                </div>
         </CardContent>
       </Card>
     </>
