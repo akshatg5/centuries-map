@@ -1,5 +1,6 @@
-import CenturiesMap from "@/components/centuries-map";
 import PlayerSelector from "@/components/player-selector";
+import { WorldMap } from "@/components/world-map";
+import { centuries } from "@/data/virat-kohli-centuries";
 import { CodeIcon, GithubIcon, LinkedinIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -55,7 +56,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <CenturiesMap />
+          <WorldMap
+          dots={centuries}
+          colors={{test: "#FF6B6B",  odi: "#4ECDC4",t20i: "#FFA726"}}
+          />
         </div>
       </main>
     </div>
